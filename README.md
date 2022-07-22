@@ -1,5 +1,4 @@
-Automaton that can encode (not encrypt)
-messages using a structure comprised of layers
+Automaton that can encrypt messages using a structure comprised of layers
 centered around a point (centerion).
 
 *explanation*
