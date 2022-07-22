@@ -2,6 +2,7 @@ Automaton that can encrypt messages using a structure comprised of layers
 centered around a point (centerion).
 
 *explanation*
+
 FEDS shield is a cipher that stands for Friend/Enemy/Difference/Similarity shield.
 
 FEDS shield consists of n arbitary layers and 
@@ -19,6 +20,7 @@ accompanying comments, is a structure called a `Centerion` in the file
 FEDS shield can only perform encodings on string messages. Given a string message `m`, each character `a` in `m` will go through a cipher that produces the flattened version of the FEDS shield and a padding consisting of the `Centurion`'s enemies.
 
 *emphasis*
+
 Not to be thought of as a secure cryptographic
 protocol due to two reasons: 
 
@@ -29,6 +31,7 @@ protocol due to two reasons:
     - no statistical test results included
 
 *examples*
+
 See the following screenshots for examples: 
 
 ![Encryption example](data/encryption_example.png "Encryption example")
@@ -36,5 +39,6 @@ See the following screenshots for examples:
 ![Decryption example](data/decryption_example.png "Decryption example")
 
 *questions?*
+
 For any questions and/or concerns, contact me @ 
 phamrichard45@gmail.com
