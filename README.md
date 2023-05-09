@@ -1,3 +1,8 @@
+**DISCLAIMER
+Program has a zero-division bug that does not allow division if denominator is 0 at any point in a character's
+encoding by the bi-key, thereby causing a crash.
+**END_DISCLAIMER
+
 Automaton that can encrypt messages using a structure comprised of layers
 centered around a point (centerion).
 
