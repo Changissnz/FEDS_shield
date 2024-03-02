@@ -32,11 +32,11 @@ class Structure:
     def absorb_fire(self,f,verbose=False):
 
         # register fire
-        self.register_fire(deepcopy(f),self.fk)
+        self.register_fire(deepcopy(f),self.fk,verbose)
 
         # update f/e formation
         q = deepcopy(self.shield)
-        self.register_fire(f,self.fek,verbose)
+        self.register_fire(f,self.fek,False)
         self.c.load_fe(unpair_shield(self.shield))
         self.shield = q
         return
@@ -73,7 +73,7 @@ class Structure:
              For fire value F, The impact is felt by the cells by
              <F,F-1,F-2,F - |SHIELD|>; |SHIELD| := number of cells comprising the shield 
     '''
-    def register_fire(self,f,bk,verbose = False):
+    def register_fire(self,f,bk,verbose = True):
         l = len(self.shield)
         for i in range(l):
             f = self.register_fire_on_layer(bk,f,i,verbose)

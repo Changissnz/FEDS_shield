@@ -172,7 +172,8 @@ def input_msg():
         try: 
             m_ = input("\t\t* file:\t")
             with open("data/" + m_) as m2:
-                m = m2.readlines() 
+                m = m2.readlines()
+                m = "".join(m) 
         except:
             print("INVALID MSG, RE-LOOP")
             return input_msg()
@@ -180,18 +181,6 @@ def input_msg():
         print("INVALID INPUT, RE-LOOP")
         return input_msg()
     return m
-
-
-def encode_msg():
-    ce = CryptEnv1(a,s,bk1,bk2,m,wf)
-
-def decode_msg():
-    s = "nu_shield1"
-    m = "wf1.txt"
-    b = ("bk10","bk11")
-    a = "std_alpha"
-    de = DecryptEnv1(s,m,b,a)
-    return -1
 
 def main():
     print("V3IIKVM 2 FEDS shield")
@@ -201,8 +190,12 @@ def main():
     print("------")
     print("0 -> make alphabet")
     print("1 -> load vars for FEDS shield")
+    print("2 -> quit")
     print("------")
     x = input()
+
+    if x == "2":
+        return 
 
     if x == "0":
         a_nu_alpha_bet()
@@ -232,3 +225,5 @@ def main():
         de.decode()
         print("DECODED MSG")
         print(de.deco) 
+
+r = "r = 345drgRE5YERH3498YTIODFIL;LJI;LDFLJ;ERI;OJEAR;IHOGD.KNERKJ;TRGIHERKJOGFRIJ;LI;OJEGT;IHODGIJO;KJL;KDGKJ;LDGKJ;LDGLKJDGKJL;DJ;LDGKJL;DGSKJ;LDFJLDLDKLLKJ;DDS;L;IJ vampire"

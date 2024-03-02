@@ -41,6 +41,7 @@ class DecryptEnv1:
         # each is char encoding
         # s2 s1
         self.s1,self.s2 = None,None
+        self.is_active = True
 
     def decode(self):
         while self.decode_one():continue
@@ -49,6 +50,10 @@ class DecryptEnv1:
     """
     def decode_one(self):
 
+        if not self.is_active:
+            print("[!!] BROKEN ENCRYPTION")
+            return False 
+        
         if len(self.msg) == 0:
             # case: use initial shield
             self.s1 = deepcopy(self.s2)
@@ -58,6 +63,10 @@ class DecryptEnv1:
             self.s2 = s2
 
             qi = self.decode_pair()
+            self.register_decode_pair(qi)
+            if not self.is_active:
+                print("[!!] BROKEN ENCRYPTION")
+                return False
             self.deco += self.alphabet[qi]
 
             ##3 ?? 
@@ -85,7 +94,10 @@ class DecryptEnv1:
         self.s1 = deepcopy(self.s2)
         self.s2 = q
         qi = self.decode_pair()
-        ##print("QI: ",qi)
+        self.register_decode_pair(qi)
+        if not self.is_active:
+            print("[!!] BROKEN ENCRYPTION")
+            return False
         self.deco += self.alphabet[qi]
         self.decoh.append(self.s1)
         return True 
@@ -93,7 +105,17 @@ class DecryptEnv1:
     def decode_pair(self):
         # decode pair
         i = self.shieldHole
-        return self.bk.invert_apply_int(self.s2[i][0],self.s1[i][0],self.s1[i][1])
+        try:
+            return self.bk.invert_apply_int(self.s2[i][0],self.s1[i][0],self.s1[i][1])
+        except:
+            return False
+
+    def register_decode_pair(self,dp): 
+        if type(dp) == bool:
+            self.is_active = False
+        if dp not in self.alphabet:
+            self.is_active = False 
+        return
 
     def pop_pad(self,x):
         while x > 0:

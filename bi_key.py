@@ -27,6 +27,7 @@ class BiKey:
     '''
     def __init__(self,operands,opIndex,modulo):
         assert BiKey.check_operands(operands)
+        # variable used for constructing a new <BiKey> instance 
         self.operands = operands
         assert BiKey.check_index(opIndex,len(self.operands))
         self.opIndex = opIndex
@@ -92,12 +93,25 @@ class BiKey:
     def apply_int(self,f,t):
         # operate on fire f
         q = f
+
+        ### !!
+        print("OPINDEX")
+        print(self.opIndex)
         for o in self.opIndex:
             if self.kd[o][1]:
                 q = q * self.kd[o][0]
             else:
                 q = q + self.kd[o][0]
         
+        ###
+        """
+        for x in self.kd: 
+            if x[1]: 
+                q *= x[0]
+            else: 
+                q += x[0] 
+        """
+
         # operate on t
         if self.lostus:
             q = q * t
