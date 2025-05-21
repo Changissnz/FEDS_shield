@@ -1,7 +1,7 @@
-from structure import *
-from bi_key import * 
-from file_ops import *
-from firing_agent import *
+from .structure import *
+from .bi_key import * 
+from .file_ops import *
+from .firing_agent import *
 from copy import deepcopy
 import csv
 

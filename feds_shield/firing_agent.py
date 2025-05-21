@@ -1,4 +1,4 @@
-from alphabet_load import * 
+from .alphabet_load import * 
 
 class FiringAgent: 
 

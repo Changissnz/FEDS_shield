@@ -1,4 +1,4 @@
-from file_ops import *
+from feds_shield.file_ops import *
 import unittest
 
 '''
@@ -15,3 +15,6 @@ class Testing(unittest.TestCase):
         f = "x"
         q = load_shield_from_file(f)
         assert q == [[1,3,4],[5,10,20],[10,20],[20,30]]
+
+if __name__ == '__main__':
+    unittest.main()

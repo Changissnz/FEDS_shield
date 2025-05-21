@@ -1,5 +1,5 @@
 import random
-from file_ops import *
+from .file_ops import *
 
 """
 fp1 := str,kd file
@@ -94,24 +94,12 @@ class BiKey:
         # operate on fire f
         q = f
 
-        ### !!
-        print("OPINDEX")
-        print(self.opIndex)
         for o in self.opIndex:
             if self.kd[o][1]:
                 q = q * self.kd[o][0]
             else:
                 q = q + self.kd[o][0]
         
-        ###
-        """
-        for x in self.kd: 
-            if x[1]: 
-                q *= x[0]
-            else: 
-                q += x[0] 
-        """
-
         # operate on t
         if self.lostus:
             q = q * t

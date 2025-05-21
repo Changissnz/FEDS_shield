@@ -26,6 +26,9 @@ accompanying comments, is a structure called a `Centerion` in the file
 
 FEDS shield can only perform encodings on string messages. Given a string message `m`, each character `a` in `m` will go through a cipher that produces the flattened version of the FEDS shield and a padding consisting of the `Centurion`'s enemies.
 
+Run tests by going into this directory. Then 
+`python -m unittest discover tests`
+
 *emphasis*
 
 Not to be thought of as a secure cryptographic
@@ -49,3 +52,4 @@ See the following screenshots for examples:
 
 For any questions and/or concerns, contact me @ 
 phamrichard45@gmail.com
+

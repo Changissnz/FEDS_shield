@@ -1,7 +1,7 @@
 #    def __init__(self,shield,fk,fek):
 
-from structure import *
-from bi_key import *
+from feds_shield.structure import *
+from feds_shield.bi_key import *
 import unittest
 
 
@@ -26,3 +26,6 @@ class Testing(unittest.TestCase):
         s.register_fire_on_layer(s.fk,97,0,False)
         assert unpair_shield(s.shield) == [[0, 22, 13], [5, 10, 20], [10, 20], [20, 30]]
         return
+
+if __name__ == '__main__':
+    unittest.main()

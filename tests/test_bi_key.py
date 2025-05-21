@@ -1,4 +1,4 @@
-from bi_key import *
+from feds_shield.bi_key import *
 import unittest
 
 '''
@@ -72,4 +72,6 @@ class Testing(unittest.TestCase):
             
 
 
-    
+
+if __name__ == '__main__':
+    unittest.main()

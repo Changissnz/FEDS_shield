@@ -2,7 +2,7 @@
 loads user-file alphabet into memory  
 '''
 import json
-from file_ops import *
+from .file_ops import *
     
 def save_alphabet(d,f):
     with open(modifini(f),'w') as fi:

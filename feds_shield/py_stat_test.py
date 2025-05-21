@@ -7,7 +7,7 @@ provided are basic tests and are non-conclusive
 for determining whether a key satisfies cryptographic
 standards.
 '''
-from bi_key import *
+from .bi_key import *
 
 ######################################################
 

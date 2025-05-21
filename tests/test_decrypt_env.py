@@ -1,4 +1,4 @@
-from decrypt_env import *
+from feds_shield.decrypt_env import *
 
 import unittest
 
@@ -15,3 +15,6 @@ class Testing(unittest.TestCase):
         de = DecryptEnv1(s,m,b,a)
         de.decode()
         assert de.deco == "WHERE is HERE"
+
+if __name__ == '__main__':
+    unittest.main()

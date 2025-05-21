@@ -1,8 +1,8 @@
-from centerion import *
-from alphabet_load import *
-from file_ops import *
+from .centerion import *
+from .alphabet_load import *
+from .file_ops import *
 from copy import deepcopy
-from bi_key import *
+from .bi_key import *
 
 def zero_shield(shield):
     for (i,s) in enumerate(shield):

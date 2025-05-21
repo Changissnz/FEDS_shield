@@ -1,8 +1,7 @@
-from bi_key import *
-from alphabet_load import * 
+from .bi_key import *
+from .alphabet_load import * 
+from .structure import * 
 from copy import deepcopy
-
-from structure import * 
 
 #WARNING: alphabet assumed to be 1-to-1
 """
