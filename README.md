@@ -1,9 +1,28 @@
-**DISCLAIMER
+
+**UPDATE: 05/22/2025**
+Uploaded this project to `pypi.org`. Program is now installable by  
+`pip install feds_shield`. Here is an important technical detail to 
+keep in mind when using the package installed from `pypi`. 
+
+The program `feds_shield` requires a folder `data` to store relevant 
+data related to its encryption/decryption process. So a user that 
+wants to include `feds_shield` in their program,  
+
+`from feds_shield import *`,  
+
+needs to be in a directory that has the folder `data`. For example, 
+if a user is in the directory `ass/cock`, there should be a folder with 
+the path `ass/cock/data`. For simplicity, the user should copy and paste 
+the files from the `data` folder of this Github repository into their own. 
+
+**NOTE: bug has been fixed.**
+**DISCLAIMER**
 
 Program has a zero-division bug that does not allow division if denominator is 0 at any point in a character's
 encoding by the bi-key, thereby causing a crash.
+**END_DISCLAIMER**
 
-**END_DISCLAIMER
+**Description**
 
 Automaton that can encrypt messages using a structure comprised of layers
 centered around a point (centerion).
