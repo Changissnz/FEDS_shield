@@ -1,12 +1,12 @@
 
 **UPDATE: 05/22/2025**
 Uploaded this project to `pypi.org`. Program is now installable by  
-`pip install feds_shield`. Here is an important technical detail to 
-keep in mind when using the package installed from `pypi`. 
+`pip install feds_shield`.  
 
-The program `feds_shield` requires a folder `data` to store relevant 
-data related to its encryption/decryption process. So a user that 
-wants to include `feds_shield` in their program,  
+Here is an important technical detail to keep in mind when using the 
+package installed from `pypi`. The program `feds_shield` requires a 
+folder `data` to store relevant data related to its encryption/decryption 
+process. So a user that wants to include `feds_shield` in their program,  
 
 `from feds_shield import *`,  
 
@@ -15,7 +15,7 @@ if a user is in the directory `ass/cock`, there should be a folder with
 the path `ass/cock/data`. For simplicity, the user should copy and paste 
 the files from the `data` folder of this Github repository into their own. 
 
-**NOTE: bug has been fixed.**
+**NOTE: bug has been fixed.**  
 **DISCLAIMER**
 
 Program has a zero-division bug that does not allow division if denominator is 0 at any point in a character's
@@ -45,8 +45,8 @@ accompanying comments, is a structure called a `Centerion` in the file
 
 FEDS shield can only perform encodings on string messages. Given a string message `m`, each character `a` in `m` will go through a cipher that produces the flattened version of the FEDS shield and a padding consisting of the `Centurion`'s enemies.
 
-Run tests by going into this directory. Then 
-`python -m unittest discover tests`
+Run tests by going into this directory. Then  
+`python -m unittest discover tests`.  
 
 *emphasis*
 
